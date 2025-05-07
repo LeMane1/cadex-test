@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Providers from "@/lib/Providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import {Box} from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Home",

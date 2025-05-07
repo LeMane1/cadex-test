@@ -1,5 +1,6 @@
 import {Box, Grid, Stack, Typography} from "@mui/material";
 import ContainerLayout from "@/lib/ContainerLayout";
+import HeroVideo from "@/components/app-components/hero-section/ui/HeroVideo";
 
 export default function HeroSection(){
   return (
@@ -12,7 +13,7 @@ export default function HeroSection(){
       }}>
       <ContainerLayout>
         <Grid container spacing={2}>
-          <Grid size={{ xs: 12, sm: 6}}>
+          <Grid size={{ xs: 12, sm: 12, md: 6 }}>
             <Stack direction={'column'} spacing={2}>
               <Typography
                 variant='h1'
@@ -30,8 +31,8 @@ export default function HeroSection(){
             </Stack>
           </Grid>
           
-          <Grid size={{ xs: 12, sm: 6}}>
-            <p>Video</p>
+          <Grid size={{ xs: 12, sm: 12, md: 6 }}>
+            <HeroVideo/>
           </Grid>
         </Grid>
       </ContainerLayout>
