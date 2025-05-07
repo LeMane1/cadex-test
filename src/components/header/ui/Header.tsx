@@ -6,7 +6,7 @@ export default function Header() {
   return (
       <Box component='header' sx={{
         position: 'sticky',
-        borderBottom: '1px solid gray',
+        borderBottom: '1px solid var(--border-color)',
       }}>
         <ContainerLayout
           sx={{
