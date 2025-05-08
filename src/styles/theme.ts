@@ -55,6 +55,19 @@ const theme = createTheme({
         }
       }
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '&:hover .MuiOutlinedInput-notchedOutline': {
+            transition: 'all 0.3s ease-in-out',
+          },
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 20px 0px',
+            transition: 'box-shadow 0.3s ease-in-out',
+          },
+        },
+      },
+    },
   },
 });
 

@@ -43,6 +43,7 @@ export default function ContactForm({onSuccess}: IContactFormProps) {
           <FormControl variant="outlined">
             <Box component='label'>Name</Box>
             <TextField
+              required
               placeholder='Value'
               autoComplete='off'
               id="userName"
@@ -58,6 +59,7 @@ export default function ContactForm({onSuccess}: IContactFormProps) {
           <FormControl variant="outlined">
             <Box component='label'>Email</Box>
             <TextField
+              required
               placeholder='Value'
               autoComplete='off'
               id="email"
@@ -74,6 +76,7 @@ export default function ContactForm({onSuccess}: IContactFormProps) {
           <FormControl variant="outlined">
             <Box component='label'>Message</Box>
             <TextField
+              required
               placeholder='Value'
               autoComplete='off'
               id="message"
