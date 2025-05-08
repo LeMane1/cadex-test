@@ -5,12 +5,14 @@ import {ContactSchema, ContactFormData} from "@/app/contact/contact-form/lib/sch
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {sendContactData} from "@/app/contact/contact-form/lib/actions";
+import {useState} from "react";
 
 interface IContactFormProps {
   onSuccess: (message: string) => void;
 }
 
 export default function ContactForm({onSuccess}: IContactFormProps) {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,9 +22,18 @@ export default function ContactForm({onSuccess}: IContactFormProps) {
   });
   
   const onSubmit = async (formData: ContactFormData) => {
-    const result = await sendContactData(formData);
-    if (result && result.length > 0) {
+    try{
+      setLoading(true)
+      const result = await sendContactData(formData);
+      if (result && result.length > 0) {
         onSuccess(result);
+      }
+    }catch(e){
+      // Better to use another callback, but as temporary way it's okay
+      console.error(e);
+      onSuccess('Something went wrong. Please try again.')
+    }finally {
+      setLoading(false);
     }
   };
   
@@ -93,7 +104,13 @@ export default function ContactForm({onSuccess}: IContactFormProps) {
           </FormControl>
         </Stack>
         
-        <Button type={'submit'} variant='contained'>Submit</Button>
+        <Button
+          type='submit'
+          variant='contained'
+          loading={loading}
+        >
+          Submit
+        </Button>
       </Stack>
     </Box>
   )

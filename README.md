@@ -13,7 +13,7 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-Also, you can check result at [Demo](http://localhost:3000)
+Also, you can check result at [Demo](https://cadex-test-nine.vercel.app/)
 
 ## About
 
