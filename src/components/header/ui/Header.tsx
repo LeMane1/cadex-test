@@ -1,6 +1,7 @@
 import {Box, Typography} from "@mui/material";
 import ContactUsButton from "@/shared/ContactUsButton";
 import ContainerLayout from "@/lib/ContainerLayout";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -19,9 +20,11 @@ export default function Header() {
           }}
         >
           {/*  Logo */}
-          <Typography variant='h5' fontWeight={'bold'}>
-            Some Company
-          </Typography>
+          <Link href='/'>
+            <Typography variant='h5' fontWeight={'bold'}>
+              Some Company
+            </Typography>
+          </Link>
           
           <ContactUsButton/>
         </ContainerLayout>
