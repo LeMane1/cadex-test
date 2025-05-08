@@ -14,7 +14,7 @@ export default function LastSection() {
     >
       <ContainerLayout>
         <Stack direction='column' spacing={4} alignItems='center' sx={{width: '100%'}}>
-          <Typography variant='h1' component='h1'>
+          <Typography variant='h1' component='h1' textAlign='center'>
             Less important title
           </Typography>
           
