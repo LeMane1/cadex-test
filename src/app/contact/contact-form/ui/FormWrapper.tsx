@@ -7,9 +7,7 @@ import {useState} from "react";
 export default function FormWrapper() {
   const [formResponse, setFormResponse] = useState<string>('');
   
-  const handleOnSuccess = (message: string) => {
-    setFormResponse(message)
-  }
+  const handleOnSuccess = (message: string) => setFormResponse(message)
   
   return (
     <Box
