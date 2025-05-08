@@ -7,7 +7,7 @@ interface IContactUsButtonProps {
 
 export default function ContactUsButton({sx}: IContactUsButtonProps) {
   return (
-    <LinkButton href={'/contact-us'} sx={{...sx}}>
+    <LinkButton href={'/contact'} sx={{...sx}}>
       Contact Us
     </LinkButton>
   )
